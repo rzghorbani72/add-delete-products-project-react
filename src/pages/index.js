@@ -1,19 +1,20 @@
-import React,{ PureComponent } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { updatePosts,getPosts} from "../redux/actions/action";
 import {isEmpty} from 'lodash';
+import { updatePosts,getPosts} from "../redux/actions/action";
+import {GET_POSTS} from "../redux/actions/type";
 
-class Index extends PureComponent {
+class Index extends React.Component {
 	componentDidMount() {
-		this.props.getPosts();
+		this.props.getPosts(GET_POSTS);
 	}
-	
 	render () {
 		const {postsInfo} = this.props;
 		const posts = postsInfo.posts;
 		return (
-			<div id="Index" className=" container-fluid row">
+			<div id="Index" className="container-fluid">
+				<button onClick={()=> this.props.getPosts()} className="alert alert-light">بارگیری مجدد آیتم ها</button>
 				{isEmpty(posts) ? '' :
 					posts.map((item,i)=>(
 						<div key={i}>
@@ -27,8 +28,4 @@ class Index extends PureComponent {
 	}
 }
 const mapStateToProps = state => state;
-const mapDispatchToProps = dispatch => ({
-	updatePosts : id=>dispatch(updatePosts(id)),
-	getPosts:()=>dispatch(getPosts())
-});
-export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Index));
+export default connect(mapStateToProps,{getPosts,updatePosts})(withRouter(Index));
