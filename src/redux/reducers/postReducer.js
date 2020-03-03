@@ -8,16 +8,19 @@ export default function (state = initialState, action) {
 		case RESET_POSTS:
 			setLocalData('deleted',{ids:[]});
 			return {
+				...state,
 				posts: action.payload
 			};
 		case GET_POSTS:
 			return {
+				...state,
 				posts: filteredPosts(action.payload,getLocalData('deleted').ids)
 			};
 		case UPDATE_POSTS:
 			let deleted_ids=_.concat(getLocalData('deleted').ids,[action.payload.id]);
 			setLocalData('deleted',{ids:deleted_ids});
 			return {
+				...state,
 				posts:filteredPosts(action.payload.info,deleted_ids),
 			};
 		default:

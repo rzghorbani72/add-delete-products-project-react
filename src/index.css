@@ -1,3 +1,20 @@
+@font-face {
+  font-family: IRANYekanWebRegular;
+  font-style: normal;
+  src: url('./static/font/iranyekanwebregular.ttf');
+}
+
+@font-face {
+  font-family: IRANYekanWebLight;
+  font-style: normal;
+  src: url('./static/font/iranyekanweblight.ttf');
+}
+
+@font-face {
+  font-family: IRANYekanWebBold;
+  font-style: normal;
+  src: url('./static/font/iranyekanwebbold.ttf');
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +27,71 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.card .itemName ,.card .info{
+  margin: 20px;
+  font-size: 1.5rem;
+  font-family: IRANYekanWebRegular;
+}
+.header {
+  text-align: right;
+  direction: rtl;
+  height: 100px;
+  background-color: #5a6268;
+}
+.header a:hover{
+  font-family: IRANYekanWebBold !important;
+  color: yellowgreen !important;
+}
+.header a {
+  font-family: IRANYekanWebRegular;
+  line-height: 5;
+  margin-right: 50px;
+  font-size: 1.2rem;
+  color:white;
+}
+.alert-success {
+  font-family: IRANYekanWebLight;
+  font-size: 1rem;
+}
+.actionBtn .alert-danger {
+  height: 50px;
+}
+.alert-info,.alert-danger {
+  font-family: IRANYekanWebLight;
+font-size: 1rem;
+}
+.card .desctiption {
+  font-family: IRANYekanWebLight;
+  margin: 10px;
+  font-size: 1rem;
+}
+.cardWrapper {
+  text-align: -webkit-center;
+  padding: 20px;
+}
+#Index .card:hover{
+  background-color: rgba(0,255,0,0.1) !important;
+}
+.card {
+  padding: 10px;
+  background-color: rgba(0,0,0,0.01) !important;
+}
+.actionBtn {
+  border: 5px solid white !important;
+  padding-right: 0;
+  padding-left: 0;
+}
+#Post .card img{
+  height: 400px;
+  width: auto;
+}
+#Index { direction: rtl;}
+#Index .card img{
+  height: 200px;
+  width: auto;
+}
+.pageWrapper {
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
