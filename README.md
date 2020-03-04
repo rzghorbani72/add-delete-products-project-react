@@ -1,4 +1,4 @@
-# Ghaboli NextJs Web framework
+# Hasin Group React-Redux Exam Project
 Ghaboli web api is using NodeJs,ExpressJs,Mongodb,NextJs
 
 ## Features
