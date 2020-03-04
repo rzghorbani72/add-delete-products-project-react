@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Test App React-Redux Test App snapshots should render AboutPage with given state from Redux store 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <div
+      className="nav"
+    >
+      <a
+        className="nav-item nav-link active "
+        href="/"
+        id="HomeLink"
+        onClick={[Function]}
+      >
+        خانه
+      </a>
+      <a
+        className="nav-item nav-link "
+        href="/about"
+        id="AboutLink"
+        onClick={[Function]}
+      >
+        درباره‌ما
+      </a>
+    </div>
+  </header>,
+  <div
+    className="pageWrapper col-12 row"
+    id="About"
+  >
+    <div
+      className="col-lg-3 col-sm-12"
+    />
+    <div
+      className="col-lg-6 col-sm-12 cardWrapper"
+    >
+      <div>
+        <h2>
+          درباره ما
+        </h2>
+      </div>
+      <div
+        className="desctiption"
+      >
+        <span>
+          لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند. توسط فرم زیر می توانید متن ساختگی مورد نظر خود را در واحدهای کاراکتر، کلمه و پاراگراف تولید کنید، سپس آنرا کپی کنید و در کار مورد نظر خود قرار دهید. زبان مورد نظر خود را انتخاب کنید ...
+        </span>
+      </div>
+    </div>
+    <div
+      className="col-lg-3 col-sm-12"
+    />
+  </div>,
+]
+`;
+
+exports[`App Test App React-Redux Test App snapshots should render AboutPage with given state from Redux store 2`] = `
+Array [
+  Array [
+    [Function],
+  ],
+]
+`;
+
+exports[`App Test App React-Redux Test App snapshots should render HomePage with given state from Redux store 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <div
+      className="nav"
+    >
+      <a
+        className="nav-item nav-link active "
+        href="/"
+        id="HomeLink"
+        onClick={[Function]}
+      >
+        خانه
+      </a>
+      <a
+        className="nav-item nav-link "
+        href="/about"
+        id="AboutLink"
+        onClick={[Function]}
+      >
+        درباره‌ما
+      </a>
+    </div>
+  </header>,
+  <div
+    className="col-12 row pageWrapper"
+    id="Index"
+  >
+    <div
+      className="resetBtn"
+    >
+      <button
+        className="alert alert-success"
+        onClick={[Function]}
+        type="button"
+      >
+        بارگیری مجدد آیتم ها
+      </button>
+    </div>
+    <div
+      className="container col-12 row"
+    >
+      
+    </div>
+  </div>,
+]
+`;
+
+exports[`App Test App React-Redux Test App snapshots should render HomePage with given state from Redux store 2`] = `
+Array [
+  Array [
+    [Function],
+  ],
+]
+`;
+
+exports[`App Test App React-Redux Test App snapshots should render PostPage with given state from Redux store 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <div
+      className="nav"
+    >
+      <a
+        className="nav-item nav-link active "
+        href="/"
+        id="HomeLink"
+        onClick={[Function]}
+      >
+        خانه
+      </a>
+      <a
+        className="nav-item nav-link "
+        href="/about"
+        id="AboutLink"
+        onClick={[Function]}
+      >
+        درباره‌ما
+      </a>
+    </div>
+  </header>,
+  <div
+    className="pageWrapper col-12 row"
+    id="Post"
+  >
+    <div
+      className="col-lg-3 col-sm-12"
+    />
+    
+    <div
+      className="col-lg-3 col-sm-12"
+    />
+  </div>,
+]
+`;
+
+exports[`App Test App React-Redux Test App snapshots should render PostPage with given state from Redux store 2`] = `
+Array [
+  Array [
+    [Function],
+  ],
+]
+`;

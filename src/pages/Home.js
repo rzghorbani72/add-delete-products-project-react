@@ -1,25 +1,23 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {isEmpty} from 'lodash';
-import {getPosts, updatePosts} from "../redux/actions/action";
+import {getPostsAction, updatePostsAction} from "../redux/actions/action";
 import {GET_POSTS} from "../redux/actions/type";
-
-//import Header from "../components/header";
+import Header from "../components/header";
 
 export class Home extends React.Component {
 	componentDidMount() {
-		this.props.getPosts(GET_POSTS);
+		this.props.getPostsAction(GET_POSTS);
 	}
-	
 	render() {
 		const {postsInfo} = this.props;
 		const posts = isEmpty(postsInfo) ? [] : postsInfo.posts;
 		return (
 			<React.Fragment>
-				{/*<Header/>*/}
+				<Header/>
 				<div id="Index" className="col-12 row pageWrapper">
 					<div className={`resetBtn`}>
-						<button onClick={() => this.props.getPosts()} className="alert alert-success">بارگیری مجدد آیتم ها</button>
+						<button type='button' onClick={() => this.props.getPostsAction()} className="alert alert-success">بارگیری مجدد آیتم ها</button>
 					</div>
 					<div className={`container col-12 row`}>
 						{isEmpty(posts) ? '' :
@@ -29,12 +27,12 @@ export class Home extends React.Component {
 										<img src={info.image} alt={info.title}/>
 										<div className={`itemName`}><a href={`/post/${info.id}`}>{info.title}</a></div>
 										<div className={`col-12 row`}>
-											<div className={`col-lg-6 col-sm-12 alert alert-danger actionBtn`}>
-												<button className={`alert-danger`} onClick={() => this.props.updatePosts(info.id)}>حذف</button>
+											<div className={`col-lg-6 col-sm-12 alert alert-danger actionBtn deleteBtn`}>
+												<button type='button' className={`alert-danger delete-${info.id}`} onClick={() => this.props.updatePostsAction(info.id)}>حذف</button>
 											</div>
 											<div className={`col-lg-6 col-sm-12 alert alert-info actionBtn`}>
 												<a href={`/post/${info.id}`}>
-													<button className={`alert-info`}>مشاهده جزییات</button>
+													<button  type='button' className={`alert-info`}>مشاهده جزییات</button>
 												</a>
 											</div>
 										</div>
@@ -54,6 +52,6 @@ const mapStateToProps = state => ({
 	output: state.output
 });
 export default connect(mapStateToProps, {
-	getPosts,
-	updatePosts
+	getPostsAction,
+	updatePostsAction
 })(Home);

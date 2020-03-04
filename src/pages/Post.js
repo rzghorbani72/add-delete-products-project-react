@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {withRouter} from 'react-router-dom';
 import {connect} from "react-redux";
-import {getPosts, updatePosts} from "../redux/actions/action";
+import {getPostsAction, updatePostsAction} from "../redux/actions/action";
 import _ from 'lodash';
 import {get} from './../static/defaultPosts';
 import Header from "../components/header";
@@ -62,6 +62,6 @@ class Post extends PureComponent {
 
 const mapStateToProps = state => state;
 export default connect(mapStateToProps, {
-	getPosts,
-	updatePosts
+	getPostsAction,
+	updatePostsAction
 })(withRouter(Post));

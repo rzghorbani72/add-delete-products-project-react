@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 class Header extends Component {
 	render () {
 		return (
-			<div className={`header`}>
+			<header className={`header`}>
 				<div className={`nav`}>
-					<Link to="/" className="nav-item nav-link active ">خانه</Link>
-					<Link to="/about" className="nav-item nav-link ">درباره‌ما</Link>
+					<Link to="/" id="HomeLink" className="nav-item nav-link active ">خانه</Link>
+					<Link to="/about" id="AboutLink" className="nav-item nav-link ">درباره‌ما</Link>
 				</div>
-			</div>
+			</header>
 		);
 	}
 }

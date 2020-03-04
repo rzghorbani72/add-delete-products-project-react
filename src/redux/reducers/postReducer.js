@@ -1,40 +1,47 @@
-import {GET_POSTS,RESET_POSTS, UPDATE_POSTS} from '../actions/type';
+import {GET_POSTS, RESET_POSTS, UPDATE_POSTS} from '../actions/type';
 import _ from 'lodash';
+
 const initialState = {
 	posts: [],
+	deleted: []
 };
 export default function (state = initialState, action) {
 	switch (action.type) {
 		case RESET_POSTS:
-			setLocalData('deleted',{ids:[]});
+			setLocalData('deleted', {ids: []});
 			return {
 				...state,
+				deleted: [],
 				posts: action.payload
 			};
 		case GET_POSTS:
 			return {
 				...state,
-				posts: filteredPosts(action.payload,getLocalData('deleted').ids)
+				deleted: [],
+				posts: filteredPosts(action.payload, getLocalData('deleted').ids)
 			};
 		case UPDATE_POSTS:
-			let deleted_ids=_.concat(getLocalData('deleted').ids,[action.payload.id]);
-			setLocalData('deleted',{ids:deleted_ids});
+			let deleted_ids = _.concat(getLocalData('deleted').ids, [action.payload.id]);
+			setLocalData('deleted', {ids: deleted_ids});
 			return {
 				...state,
-				posts:filteredPosts(action.payload.info,deleted_ids),
+				deleted: deleted_ids,
+				posts: filteredPosts(action.payload.info, deleted_ids),
 			};
 		default:
 			return state;
 	}
 }
 
-function filteredPosts(items,deletedIds) {
-	_.remove(items,(item)=>{return _.includes(deletedIds,item.id)});
+function filteredPosts(items, deletedIds) {
+	_.remove(items, (item) => {return _.includes(deletedIds, item.id)});
 	return items;
 }
+
 function getLocalData(key) {
 	return _.isEmpty(localStorage.getItem(key)) ? [] : JSON.parse(localStorage.getItem(key));
 }
-function setLocalData(key,value) {
-	return localStorage.setItem(key,JSON.stringify(value));
+
+function setLocalData(key, value) {
+	return localStorage.setItem(key, JSON.stringify(value));
 }
