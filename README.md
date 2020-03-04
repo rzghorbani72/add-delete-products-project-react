@@ -1,5 +1,5 @@
 # Hasin Group React-Redux Exam Project
-Ghaboli web api is using NodeJs,ExpressJs,Mongodb,NextJs
+this web project uses ReactJs,Redux,Jest,Enzyme
 
 ## Features
 
