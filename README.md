@@ -12,11 +12,6 @@ this web project uses ReactJs,Redux,Jest,Enzyme
 ## Getting Started
 Clone the repo and make it yours:
 
-```bash
-git clone https://gitlab.com/rzgh/hasin-exam.git
-cd ./hasin-exam
-```
-
 ## start commands
 
 1- Install dependencies
