@@ -1,4 +1,4 @@
-# Hasin Group React-Redux Exam Project
+# React-Redux add and delete product and persistence
 this web project uses ReactJs,Redux,Jest,Enzyme
 
 ## Features
